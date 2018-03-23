@@ -1,25 +1,32 @@
 import random
 
-init_deck = {}
+deck_values = {}
 
 for number in range(1, 14):
 	for suit in ['spades', 'clubs', 'diamonds', 'hearts']:
 		if number == 1:
 			key = 'ace of %s' % (suit)
-			deck[key] = 1
+			deck_values[key] = 1
 		elif number <= 10:
 			key = '%d of %s' % (number, suit)
-			deck[key] = number
+			deck_values[key] = number
 		elif number == 11:
 			key = 'jack of %s' % (suit)
-			deck[key] = 10
+			deck_values[key] = 10
 		elif number == 12:
 			key = 'queen of %s' % (suit)
-			deck[key] = 10
+			deck_values[key] = 10
 		elif number == 13:
 			key = 'king of %s' % (suit)
-			deck[key] = 10
-deck = init_deck
+			deck_values[key] = 10
 
-print (len(deck))
-print (keys(deck))
+
+def shuffle(deck, dct):
+	deck = []
+	for key in dct:
+		deck.append(key)
+	
+
+def deal(deck, hand1, hand2):
+	
+	
